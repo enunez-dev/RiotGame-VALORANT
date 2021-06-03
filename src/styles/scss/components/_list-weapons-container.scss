@@ -1,0 +1,162 @@
+.black-background {
+    background-color: var(--color);
+    margin-top: -1rem;
+}
+
+.arsenal-img {
+    width: 400px;
+    padding-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.category-container {
+    width: 100%;
+    padding-left: 3rem;
+    align-items: center;
+    display: flex;
+    height: 3rem;
+    background-color: var(--pink-color);
+}
+
+.category--text {
+    font-size: var(--h3-font-size);
+    color: white;
+    font-family: var(--title-font);
+}
+
+.slide {
+    // display: none;
+    animation-name: showslide;
+    animation-duration: 1.2s;
+}
+
+@keyframes showslide {
+    from {
+        opacity: 0;
+        margin-top: 100%;
+    }
+    50% {
+        margin-top: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+.list-weapons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    place-items: center;
+    @include from(l) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.weapon-box {
+    background-color: white;
+    width: 100%;
+    height: 270px;
+    border-radius: 20px;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+
+    @include from(l) {
+        width: 350px;
+        height: 320px;
+    }
+}
+
+.weapon-box:hover>.weapon-box--hover {
+    right: 0%;
+}
+
+.weapon-box--img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wp-h3 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: var(--title-font);
+    color: var(--color);
+}
+
+.weapon-skin--img {
+    width: 48%;
+}
+
+.weapon-skin-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+}
+
+.weapon-box--hover {
+    // display: none;
+    background-color: var(--pink-color);
+    position: absolute;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.25);
+    z-index: var(--z-front);
+    transition: right, .3s;
+}
+
+// .weapon-box::before {
+//     content: "";
+//     width: 100%;
+//     height: 100%;
+//     right: 100%;
+//     position: absolute;
+//     border-radius: 20px;
+//     background-color: var(--pink-color);
+//     transition: right, .3s;
+// }
+
+// .weapon-box:hover::before {
+//     right: 0%;
+// }
+
+.wd-h3 {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    font-family: var(--title-font);
+    letter-spacing: 1.25px;
+}
+
+.wd-h3,
+.wd-p {
+    padding-left: 1rem;
+    color: white;
+    padding-right: 1rem;
+}
+
+.skin-opacity--background {
+    background-color: var(--pink-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: grid;
+    place-content: center;
+    opacity: .4;
+}
+
+.skin-opacity--img {
+    transform: rotate(45deg);
+    width: 100%;
+}

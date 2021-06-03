@@ -1,0 +1,90 @@
+a,
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+:root {
+    @include from(l) {
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --h4-font-size: 1rem;
+        --big-font-size: 1rem;
+        --normal-font-size: 0.85rem;
+        --small-font-size: 0.7rem;
+        --smaller-font-size: 0.6875rem;
+    }
+}
+
+body {
+    background-color: darkgoldenrod;
+    background-color: var(--pink-color);
+
+    min-height: calc(100vh - var(--header-height));
+    color: var(--text-color);
+    /* padding-top: var(--header-height); */
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    line-height: var(--body-line-height);
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url(/src/images/Background/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+}
+
+
+.main {
+    margin-top: 5rem;
+
+    @include from(l) {
+        margin-top: 0;
+    }
+}
+
+@font-face {
+    font-family: "Druk Wide Medium";
+    src: url("//db.onlinewebfonts.com/t/7e389c5e310dc537b083e0e25ea6eab5.eot");
+    src: url("//db.onlinewebfonts.com/t/7e389c5e310dc537b083e0e25ea6eab5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7e389c5e310dc537b083e0e25ea6eab5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7e389c5e310dc537b083e0e25ea6eab5.woff") format("woff"), url("//db.onlinewebfonts.com/t/7e389c5e310dc537b083e0e25ea6eab5.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7e389c5e310dc537b083e0e25ea6eab5.svg#Druk Wide Medium") format("svg");
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--pink-color);
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color);
+}

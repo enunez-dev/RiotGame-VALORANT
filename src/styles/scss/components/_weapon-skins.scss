@@ -1,0 +1,80 @@
+.weapon-skins-container {
+    display: grid;
+    grid-template-columns: none;
+    gap: .5rem;
+    bottom: -2rem;
+
+    @include from(l) {
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+.weapon-hidden {
+    display: none;
+    
+    @include from(l) {
+        display: grid;
+    }
+}
+
+.weapon-shown {
+    grid-area: superdown;
+    @include from(l) {
+        display: none;
+    }
+}
+
+.weapon-skin {
+    position: relative;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid white;
+    color: white;
+    font-family: var(--title-font);
+    font-size: var(--small-font-size);
+    letter-spacing: 1.25px;
+
+    @include from(l) {
+        margin-left: -3rem;
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+}
+
+.weapon-skin-img {
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    @include from(l) {
+        width: 110%;
+    }
+}
+
+
+.mt {
+    margin-top: 1rem;
+}
+
+.valorant-points {
+    margin-left: .4rem;
+    margin-right: .4rem;
+}
+
+.weapon-skin-points {
+    color: var(--pink-color);
+    margin-right: 1rem;
+}
+
+.weapon-skin-txt {
+    align-items: center;
+}
+
+.weapon-skin-name {
+    margin-left: 1rem;
+}

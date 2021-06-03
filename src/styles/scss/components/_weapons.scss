@@ -1,0 +1,92 @@
+.weapon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.foto-weapon {
+    margin: auto;
+    position: relative;
+    margin-top: 1rem;
+    display: none;
+
+    @include from(l) {
+        margin-top: 1.5rem;
+        position: relative;
+        height: 50rem;
+        display: block;
+}
+}
+
+.foto-weapon-text {
+    position: absolute;
+    margin: auto;
+    right: -3rem;
+    height: 100%;
+    z-index: -1;
+}
+
+.info-weapon {
+    width: 100%;
+    background-color: white;
+    margin: 1.5rem 1.5rem 0rem 1.5rem;
+
+    @include from(l){
+        width: 75%;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 2rem;
+        margin: 1.5rem 3.5rem 0rem 1.5rem;
+    }
+}
+
+.weapon-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    max-width: 500px;
+    @include from(l) {
+        top: 0;
+        width: 110%;
+        left: 0;
+        max-width: 45rem;
+    }
+    @include from(lx) {
+        top: -1rem;
+        width: 110%;
+        left: -5rem;
+    }
+}
+
+.weapon-tag {
+    background-color: var(--pink-color);
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-left: 5rem;
+}
+
+.weapon-tag-img {
+    width: 30%;
+}
+
+.weapon-coins {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    z-index: var(--z-front);
+}
+
+.black {
+    color: var(--primary-color);
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.weapon-dark-icon {
+    width: 1rem;
+}

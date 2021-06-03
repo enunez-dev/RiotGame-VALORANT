@@ -1,0 +1,62 @@
+.info-weapon-chart{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    min-height: 120px;
+}
+
+.down {
+    grid-area: down;
+}
+
+.fire-title {
+    font-size: var(--h3-font-size);
+    font-family: var(--title-font);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1.25px;
+}
+
+.fire-text {
+    font-size: var(--normal-font-size);
+    margin-bottom: 1rem;
+    font-family: var(--title-font);
+    letter-spacing: 1.25px;
+    color: var(--primary-color-alt);
+
+    & strong {
+        color: var(--primary-color);
+    }
+}
+
+.space-txt {
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.weapon-video {
+    bottom: -2.2rem;
+    height: 102%;
+    @include from(l) {
+        position: absolute;
+        right: -2rem;
+        height: auto;
+        width: 102%;
+    }
+
+}
+
+.spectre-text {
+    height: 100%;
+    @include from(l) {
+        margin-top: -2rem;
+        height: 90%;
+    }
+    }
+    
+
+.clip {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
